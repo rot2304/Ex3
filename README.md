@@ -22,3 +22,25 @@ max(btwe)
 [1] 115.3667
 ```
 
+###	ii.	Closeness:
+
+```{r}
+nameMaxCls = which((closeness(g))==max(closeness (g)))
+V(g)[ nameMaxCls]$name
+[1] "torres"
+ cls <- closeness(g)
+max(cls)
+[1] 0.003194888
+```
+
+
+###	iii.	Eigencetor
+
+```{r}
+maxEv = which(max(evcent(g)$vector)==(evcent(g)$vector))
+V(g)[maxEv]$name
+[1] "karev"
+max(evcent(g)$vector)
+[1] 1
+```
+
