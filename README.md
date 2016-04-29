@@ -136,3 +136,28 @@ V(g)[maxEv]$label
 max(evcent(g)$vector)
 [1] 1
 ```
+
+
+##b. אלגוריתמים לזיהוי קהילות:
+
+###	Grivan-Newman algorithm
+i.	
+```{r}
+com <- edge.betweenness.community(g, directed=F)
+ V(g)$color=com$membership
+ plot(g)
+```
+![](https://cloud.githubusercontent.com/assets/17852872/14914176/b5acc91e-0e10-11e6-9318-75d4b0d7090d.png)
+
+ii+iii:
+```{r}
+com
+IGRAPH clustering edge betweenness, groups: 10, mod: 0.6
+
+table(com$membership)
+
+ 1  2  3  4  5  6  7  8  9 10 
+18  9 11 13  6 15 16  9  9  9
+```
+* ישנן סה"כ 10 קהילות ומפורט לעיל מספר האנשים בכל קהילה
+* ערך הmodularity הוא 0.6
