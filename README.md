@@ -110,31 +110,29 @@ plot(g)
 
 ```{r}
 nameMaxBtwe = which((betweenness(g))==max(betweenness(g)))
-V(g)[ nameMaxBtwe]$name
-[1] "sloan"
-btwe <- betweenness(g)
-max(btwe)
-[1] 115.3667
+> V(g)[ nameMaxBtwe]$label
+[1] "NotreDame"
+max(betweenness(g))
+[1] 215.9858
 ```
 
 ###	ii.	Closeness:
 
 ```{r}
 nameMaxCls = which((closeness(g))==max(closeness (g)))
-V(g)[ nameMaxCls]$name
-[1] "torres"
- cls <- closeness(g)
-max(cls)
-[1] 0.003194888
+V(g)[ nameMaxCls]$label
+[1] "LouisianaTech"
+max(closeness(g))
+[1] 0.003831418
 ```
 
 
 ###	iii.	Eigencetor
 
 ```{r}
-maxEv = which(max(evcent(g)$vector)==(evcent(g)$vector))
-V(g)[maxEv]$name
-[1] "karev"
+maxEv = which(max(evcent(g)$vector)==evcent(g)$vector)
+V(g)[maxEv]$label
+[1] "Nevada”
 max(evcent(g)$vector)
 [1] 1
 ```
