@@ -161,3 +161,25 @@ table(com$membership)
 ```
 * ישנן סה"כ 10 קהילות ומפורט לעיל מספר האנשים בכל קהילה
 * ערך הmodularity הוא 0.6
+
+###	Fast-Greedy algorithm:
+i.	
+```{r}
+com <- fastgreedy.community(g)
+ V(g)$color = com$membership
+ plot(g)
+```
+![](https://cloud.githubusercontent.com/assets/17852872/14914181/b5cd95ea-0e10-11e6-9cdd-eb5b617740a4.png)
+
+ii+iii:
+```{r}
+com
+IGRAPH clustering fast greedy, groups: 6, mod: 0.55
+
+table(com$membership)
+
+ 1  2  3  4  5  6 
+10 23 21 13 21 27 
+```
+* ישנן סה"כ 6 קהילות וניתן לראות כמה אנשים יש בכל קהילה
+* ערך הmodularity הוא 0.55
