@@ -46,7 +46,7 @@ max(evcent(g)$vector)
 ##b. אלגוריתמים לזיהוי קהילות:
 
 ###	Grivan-Newman algorithm
-	i.	
+i.	
 ```{r}
 com <- edge.betweenness.community(g, directed=F)
 V(g)$color=com$membership
@@ -68,6 +68,13 @@ table(com$membership)
 * ניתן לראות שישנן סה"כ 7 קהילות. בקבילה מספר 1 8 אנשים, בקהילה מספר 2 חמישה וכך הלאה..
 * כמו כן, הערך שהתקבל, כפי שניתן לראות הוא 0.58
 
-
+###	Fast-Greedy algorithm:
+i.	
+```{r}
+com <- fastgreedy.community(g)
+V(g)$color=com$membership
+plot(g)
+```
+![](https://cloud.githubusercontent.com/assets/17852872/14914179/b5b3375e-0e10-11e6-839c-a7d330e8275b.png)
 
 
