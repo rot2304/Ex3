@@ -8,7 +8,16 @@ g$layout <- layout.fruchterman.reingold(g)
 plot(g) 
 
 ```
-
 ![](https://cloud.githubusercontent.com/assets/17852872/14914180/b5b6d1ac-0e10-11e6-9b10-de7a409ed1f4.png)
 
+##מדדימרכזיות גבוהים:
+	i.	Betweeness:
+```{r}
+nameMaxBtwe = which((betweenness(g))==max(betweenness(g)))
+V(g)[ nameMaxBtwe]$name
+[1] "sloan"
+btwe <- betweenness(g)
+max(btwe)
+[1] 115.3667
+```
 
