@@ -77,4 +77,16 @@ plot(g)
 ```
 ![](https://cloud.githubusercontent.com/assets/17852872/14914179/b5b3375e-0e10-11e6-839c-a7d330e8275b.png)
 
+ii+iii:
+```{r}
+com
+IGRAPH clustering fast greedy, groups: 6, mod: 0.59
+
+
+table(com$membership)
+1  2  3  4  5  6 
+10  5  4  5  5  3 
+```
+* ישנן סה"כ 6 קהילות וניתן לראות כמה אנשים יש בכל קהילה
+* כמו כן, ערך הmodularity שהתקבל הוא 0.59
 
